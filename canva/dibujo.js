@@ -1,7 +1,23 @@
 var d = document.getElementById("dibujito");
 var lienzo = d.getContext("2d");
-console.log(lienzo);
+var l = 0;
+var lineas = 30;
+var xi = 0; //constante
+var yi = 0;
+var xf = 10; 
+var yf = 300; // constante
+var colorcito = "#FAA";
 
+while(l<lineas)
+{
+    dibujarlinea(colorcito, xi, yi, xf,yf );
+    l = l + 1; // tambien se puede escribir como l++ (le va ssumando uno en cada ciclo)
+    yi = yi + 10;
+    xf = xf + 10;
+}
+
+dibujarlinea(colorcito,1,1,1,300);
+dibujarlinea(colorcito,1,300,299,299);
 
 
 function dibujarlinea(color, xinicial, yinicial, xfinal, yfinal)
@@ -13,6 +29,3 @@ function dibujarlinea(color, xinicial, yinicial, xfinal, yfinal)
     lienzo.stroke();
     lienzo.closePath();
 }
-
-dibujarlinea("pink", 10, 300, 220,10 );
-dibujarlinea("yellow", 300, 10, 10,220 );
