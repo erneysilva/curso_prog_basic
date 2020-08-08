@@ -2,22 +2,21 @@ var d = document.getElementById("dibujito");
 var lienzo = d.getContext("2d");
 var l = 0;
 var lineas = 30;
-var xi = 0; //constante
-var yi = 0;
-var xf = 10; 
-var yf = 300; // constante
+var xi = 0; 
+var yi = 0;//constante
+var xf = 300; // constante
+var yf = 10; 
 var colorcito = "#FAA";
 
 for (l=0; l<lineas; l++)
 {
     dibujarlinea(colorcito, xi, yi, xf,yf );
-    yi = yi + 10;
-    xf = xf + 10;
+    xi = xi + 10;
+    yf = yf + 10;
 }
 
-dibujarlinea(colorcito,1,1,1,300);
-dibujarlinea(colorcito,1,300,299,299);
-
+dibujarlinea(colorcito,1,1,300,1);
+dibujarlinea(colorcito,300,1,299,299);
 
 function dibujarlinea(color, xinicial, yinicial, xfinal, yfinal)
 {
