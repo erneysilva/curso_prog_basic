@@ -8,10 +8,9 @@ var xf = 10;
 var yf = 300; // constante
 var colorcito = "#FAA";
 
-while(l<lineas)
+for (l=0; l<lineas; l++)
 {
     dibujarlinea(colorcito, xi, yi, xf,yf );
-    l = l + 1; // tambien se puede escribir como l++ (le va ssumando uno en cada ciclo)
     yi = yi + 10;
     xf = xf + 10;
 }
